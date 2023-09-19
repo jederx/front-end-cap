@@ -64,7 +64,7 @@ const Sign_Up = () => {
         <div className="container" style={{marginTop:'5%'}}>
         <div className="signup-grid">
         <div className="signup-form">
-         <form method="POST" onSubmit={register}>
+         <form method="POST" >
            <div className="form-group">
                 <label htmlFor="email">Email</label>
                  <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
@@ -83,7 +83,7 @@ const Sign_Up = () => {
                  <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
                         </div>
             <div className="btn-group">
-            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light" onClick={register}>Submit</button>
+            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light" onSubmit={register}>Submit</button>
             <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light" onClick={clearState}>Reset</button>
                 </div>
           </form>
