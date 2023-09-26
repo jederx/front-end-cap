@@ -46,6 +46,10 @@ const Navbar = () => {
             setUsername(storedemail);
           }
         }, []);
+
+    const replaceName = sessionStorage.getItem("email");
+    const welcomeName = replaceName.substring(0, replaceName.indexOf("@"));
+
   return (
     <nav>
       <div className="nav__logo">
@@ -71,6 +75,7 @@ const Navbar = () => {
         </li>
         {isLoggedIn?(
           <>
+            <li className="link">Welcome, {welcomeName}</li>
             <li className="link">
               <button className="btn2" onClick={handleLogout}>
                 Logout

@@ -59,6 +59,7 @@ const Sign_Up = () => {
         setPhone('');
         setPassword('');
     }
+    
 
     return (
         <div className="container" style={{marginTop:'5%'}}>
